@@ -1,7 +1,9 @@
 const mg = require('mongoose');
 
 const ticket = mg.model('Ticket',
-	{ ticketNumber: Number,
+  {
+    _id: Number,
+    ticketNumber: Number,
     terminal: Number,
     origin: String,
     destination: String,

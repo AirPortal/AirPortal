@@ -1,4 +1,5 @@
 const userModel = require(__dirname + '/../models/user');
+const ticketModel = require(__dirname + '/../models/ticket');
 
 module.exports = {
   register: (req, res) => {

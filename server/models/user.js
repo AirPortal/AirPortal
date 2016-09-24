@@ -1,11 +1,11 @@
 const mg = require('mongoose');
+const Schema = mg.Schema;
 
-const user = mg.model('User',
-	{ name: String,
-    ticketNumber: Number,
-    terminalNumber: Number,
-
-  }
+const userSchema = Schema({
+  name: String,
+  tickets: [{ type: Schema.Types.ObjectId, ref: 'Ticket' }]
+}
 );
 
+const user = mg.model('User', userSchema);
 module.exports = user;
