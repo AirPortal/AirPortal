@@ -1,0 +1,21 @@
+{
+  "name": "airportal",
+  "version": "0.0.1",
+  "description": "Hacakthon project for Changi airport",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "^4.6.1",
+    "qrcode-reader": "^0.2.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.6.0",
+    "gulp": "^3.9.1"
+  }
+}
