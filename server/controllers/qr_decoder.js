@@ -7,7 +7,8 @@ const qrcode = require('jsqrcode')(Canvas);
 module.exports = filename => {
   console.log('decoding');
   const image = new Image();
-  image.onload = () => {
+  image.src = filename;
+  // image.onload = () => {
     var result;
     try {
       result = qrcode.decode(image);
@@ -15,6 +16,5 @@ module.exports = filename => {
     } catch(e) {
       console.log('unable to read qr code');
     }
-  };
-  image.src = filename;
+  // };
 };
