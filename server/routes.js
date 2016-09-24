@@ -1,8 +1,6 @@
-var config = require('./config');
 var express = require('express');
+var router = express.Router();
 
-module.exports = (app, mg) => {
-	app.use(express.static(__dirname + '/../client'));
-	app.use('/', express.static(__dirname + '/../client/index.html'));
+router.post('/register', require(__dirname + '/controllers/user'));
 
-};
+module.exports = router;
