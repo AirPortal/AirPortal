@@ -11,10 +11,10 @@ module.exports = {
       // var profileImageExt=req.file.extension;
       // var profileImageSize=req.file.size;
       console.log(profileImagePath);
+      qrDecoder('../' + profileImagePath);
+
       const response = JSON.stringify({msg: 'file uploaded'});
       res.send(response);
-
-      qrDecoder('../' + profileImagePath);
     }
   }
 };
