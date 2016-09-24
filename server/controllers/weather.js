@@ -1,4 +1,5 @@
 const https = require('https');
+const apiKey = '89e15931434731aefdaa04920ec60e44';
 
 module.exports = {
   getWeather: (clientReq, clientRes) => {
@@ -7,7 +8,7 @@ module.exports = {
       port: 443,
       path: '/weather/v1/current/HAM?temperatureScale=C',
       method: 'GET',
-      headers: { 'x-apiKey': '89e15931434731aefdaa04920ec60e44' }
+      headers: { 'x-apiKey': apiKey }
     };
 
     var apiReq = https.request(options, apiRes => {
@@ -15,7 +16,6 @@ module.exports = {
       console.log('headers:', apiRes.headers);
 
       apiRes.on('data', d => {
-        // process.stdout.write(d);
         clientRes.send(d);
       });
     });
