@@ -1,7 +1,7 @@
 const https = require('https');
 
 module.exports = {
-  getWeather: () => {
+  getWeather: (clientReq, clientRes) => {
     var options = {
       hostname: 'weather-qa.api.aero',
       port: 443,
@@ -10,17 +10,19 @@ module.exports = {
       headers: { 'x-apiKey': '89e15931434731aefdaa04920ec60e44' }
     };
 
-    var req = https.request(options, res => {
-      console.log('statusCode:', res.statusCode);
-      console.log('headers:', res.headers);
+    var apiReq = https.request(options, apiRes => {
+      console.log('statusCode:', apiRes.statusCode);
+      console.log('headers:', apiRes.headers);
 
-      res.on('data', d => {
-        process.stdout.write(d);
+      apiRes.on('data', d => {
+        // process.stdout.write(d);
+        const responseObject = {response: d};
+        clientRes.send(JSON.stringify(responseObject));
       });
     });
-    req.end();
+    apiReq.end();
 
-    req.on('error', e => {
+    apiReq.on('error', e => {
       console.error(e);
     });
   }
