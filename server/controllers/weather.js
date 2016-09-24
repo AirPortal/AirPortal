@@ -16,8 +16,7 @@ module.exports = {
 
       apiRes.on('data', d => {
         // process.stdout.write(d);
-        const responseObject = {response: d};
-        clientRes.send(JSON.stringify(responseObject));
+        clientRes.send(d);
       });
     });
     apiReq.end();
