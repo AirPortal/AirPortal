@@ -1,2 +1,2 @@
 // https://www.npmjs.com/package/qrcode-reader
-var QrCode = require('qrcode-reader');
+const QrCode = require('qrcode-reader');
