@@ -10,7 +10,6 @@ module.exports = {
       const msg = {msg: 'user created'};
       res.send(JSON.stringify(msg));
     });
-
   },
   login: (req, res) => {
 
