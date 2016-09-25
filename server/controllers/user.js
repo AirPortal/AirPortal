@@ -8,6 +8,9 @@ module.exports = {
     ticketModel.findOne({ ticket_number: ticketNumber}, (err, ticket) => {
       const responseObj = {msg: err};
       if(err) res.send(responseObj);
+      const oldDate = new Date();
+      const fifthteenMinutesLater = new Date(oldDate.getTime() + 15 * 60000);
+      ticket.boarding_time = fifthteenMinutesLater;
       res.send(ticket);
     });
   }
