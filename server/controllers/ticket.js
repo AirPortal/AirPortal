@@ -10,7 +10,16 @@ module.exports = {
     const terminal = columns[2];
     const gate = columns[3];
     const flight_number = columns[4];
-    const boarding_time = columns[5];
+    const boarding_time_arr = columns[5].split(':');
+    const boarding_time = new Date();
+    if(boarding_time_arr.length === 2) {
+      boarding_time.setHours(boarding_time_arr[0]);
+      boarding_time.setMinutes(boarding_time_arr[1]);
+    } else {
+      boarding_time.setHours(boarding_time_arr[0].substr(0, 2));
+      boarding_time.setMinutes(boarding_time_arr[0].substr(2));
+    }
+
     const row = columns[6];
     const seat = columns[7];
     const first_name = columns[7];
