@@ -22,10 +22,10 @@ module.exports = {
 
     const row = columns[6];
     const seat = columns[7];
-    const first_name = columns[7];
-    const last_name = columns[8];
-    const bag_tag = columns[9];
-    const flight_class = row < 10 ? "first-class" : "economy";
+    const first_name = columns[8];
+    const last_name = columns[9];
+    const bag_tag = columns[10];
+    const flight_class = parseInt(row, 10) < 10 ? 'first-class' : 'economy';
 
 
     const ticket = new ticketModel();
@@ -41,7 +41,6 @@ module.exports = {
 
     ticket.save((err, u) => {
       if(err) return console.error(err);
-
     });
     console.log(columns);
   }
