@@ -13,8 +13,7 @@ module.exports = filename => {
     console.log('result of qr code: ' + result);
   } catch(e) {
     console.log('unable to read qr code using fallback string');
-    const qrDecoder = require('./qr_decoder');
-    result = "SIN,HKT,2,E24,SQ5330,1625,24,0950581685";
+    result = 'SIN,HKT,2,E24,SQ5330,1625,24,0950581685';
   }
   return result;
 };
