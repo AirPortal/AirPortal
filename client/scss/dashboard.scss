@@ -1,6 +1,7 @@
 @import 'colors';
 body {
   background-color: $themePurple;
+  background-image: url('../assets/background_arrival.png');
 }
 
 #dashboardPage {
@@ -9,6 +10,7 @@ body {
     text-align: center;
   }
   .card {
+    min-height: 209px;
     &.darkpurple {
       background-color: $darkPurple;
     }
@@ -19,6 +21,11 @@ body {
       max-height: 100px;
       margin: auto;
       display: block;
+    }
+    .transport img {
+      width: 42px;
+      display: inline-block;
+      float: left;
     }
   }
 

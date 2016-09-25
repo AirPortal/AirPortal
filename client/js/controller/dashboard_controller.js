@@ -4,6 +4,8 @@ app.controller('dashboardController', ['$scope', 'dashboardService', ($scope, da
     $scope.temp = res.data.currentWeather.temperature;
     $scope.luggage = 'Ready!';
     $scope.waittime = 30;
+    $scope.taxi = 24;
+    $scope.subway = 56;
   }, () => {
 
   });

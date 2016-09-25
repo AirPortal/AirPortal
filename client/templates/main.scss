@@ -1,0 +1,101 @@
+// libraries
+@import "../bower_components/materialize/sass/materialize";
+@import 'colors';
+
+// style
+body {
+  background-color: $themeBG;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 5rem 1rem 2rem 1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 5rem 1rem 2rem 1rem;
+  color: $themeLightGrey;
+  &.white {
+    color: $themeWhite;
+  }
+}
+
+.alignHelper {
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn {
+  &.airportal-btn {
+    width: 80%;
+    height: 80px;
+    min-width: 300px;
+  }
+  margin-top: 20px;
+  &.airportal-primaryBtn {
+    background-color: $themeOrange;
+  }
+  &.airportal-secondaryBtn {
+    background-color: $themeRed;
+  }
+  &.airportal-white {
+    background-color: $themeWhite;
+    span, i {
+      color: $themeGrey;
+    }
+  }
+  span, i {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  i.customIcon {
+    text-align: right;
+    font-size: 36px;
+  }
+  span {
+    font-size: 18px;
+    text-align: left;
+    margin-left: 10px;
+    width: 80%;
+  }
+}
+
+// --- different pages
+#landingPage {
+  text-align: center;
+  background-image: url(../assets/background_home.png);
+	background-position: 0 100%;
+	background-size: contain;
+	background-repeat: repeat-x;
+	width: 100vw;
+	height: 100vh;
+  .btn {
+    &.airportal-primaryBtn {
+      background-color: $themeOrange;
+    }
+    &.airportal-secondaryBtn {
+      background-color: $themeRed;
+    }
+  }
+  // --- forms
+  form {
+    padding-top: 40px;
+  }
+  .qrCodeContainer {
+    width: 160px;
+    height: 160px;
+    background-color: #fff;
+    margin: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    &.hasImageSelected {
+      background-image: url('../assets/qr.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
