@@ -12,7 +12,8 @@ const ticket = mg.model('Ticket',
     flight_number: Number,
     airline_carrier: String,
     row: String,
-    bag_tags: [String]
+    bag_tags: [String],
+    flight_class: String
   }
 );
 

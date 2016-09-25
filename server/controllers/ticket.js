@@ -1,7 +1,7 @@
 const ticketModel = require(__dirname + '/../models/ticket');
 
 module.exports = {
-  parseQRString= str => {
+  parseQRString: str => {
     if(!str) return null;
     const columns = str.split(',');
 
@@ -16,6 +16,8 @@ module.exports = {
     const first_name = columns[7];
     const last_name = columns[8];
     const bag_tag = columns[9];
+    const flight_class = row < 10 ? "first-class" : "economy";
+
 
     const ticket = new ticketModel();
     ticket.terminal = terminal;
@@ -26,8 +28,9 @@ module.exports = {
     ticket.boarding_time = boarding_time;
     ticket.row = row;
     ticket.bag_tags = [bag_tag];
+    ticket.flight_class = flight_class;
 
-    ticketModel.save((err, u) => {
+    ticket.save((err, u) => {
       if(err) return console.error(err);
 
     });
