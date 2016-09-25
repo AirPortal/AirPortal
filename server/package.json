@@ -15,6 +15,7 @@
     "jsqrcode": "0.0.6",
     "mongoose": "^4.6.1",
     "multer": "^1.2.0",
+    "path": "^0.12.7",
     "qrcode-reader": "^0.2.2"
   },
   "devDependencies": {
