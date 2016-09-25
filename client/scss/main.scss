@@ -56,7 +56,7 @@ body {
   }
   // --- forms
   form {
-    margin-top: 40px;
+    padding-top: 40px;
   }
   .qrCodeContainer {
     width: 160px;
@@ -67,6 +67,7 @@ body {
     &.hasImageSelected {
       background-image: url('../assets/qr.png');
       background-size: contain;
+      background-repeat: no-repeat;
     }
   }
 }

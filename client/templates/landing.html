@@ -1,22 +1,22 @@
 <div id='landingPage' class='container' ng-controller="mainController">
-  <div class="fixed-action-btn" style="bottom: 45px; left: 24px;" ng-if='ui.selectFileOpen || ui.enterFlightOpen'>
+  <div class="fixed-action-btn animated fadeIn" style="bottom: 45px; left: 24px;" ng-if='ui.selectFileOpen || ui.enterFlightOpen'>
    <a class="btn-floating btn-large red" ng-click='uiFx.resetButtons()'>
      <i class="fa fa-arrow-left" ></i>
    </a>
  </div>
-  <a class="waves-effect waves-light btn-large airportal-btn airportal-primaryBtn animated" ng-click='dialog.selectFile()' ng-class='{fadeInDown: !(ui.selectFileOpen || ui.enterFlightOpen), fadeOutUp: (ui.selectFileOpen || ui.enterFlightOpen)}' ng-hide='(ui.selectFileOpen || ui.enterFlightOpen)'>
+  <a class="waves-effect waves-light btn-large airportal-btn airportal-primaryBtn animated fadeInDown" ng-click='dialog.selectFile()' ng-if='!(ui.selectFileOpen || ui.enterFlightOpen)'>
     <div class="alignHelper"></div>
     <i class="customIcon fa fa-qrcode"></i>
     <span>SCAN BOARDING PASS</span>
   </a>
-  <a class="waves-effect waves-light btn-large airportal-btn airportal-secondaryBtn animated"  ng-click='dialog.inputFlight()' ng-class='{fadeInDown: !(ui.selectFileOpen || ui.enterFlightOpen), fadeOutUp: (ui.selectFileOpen || ui.enterFlightOpen)}' ng-hide='(ui.selectFileOpen || ui.enterFlightOpen)'>
+  <a class="waves-effect waves-light btn-large airportal-btn airportal-secondaryBtn animated fadeInDown" ng-click='dialog.inputFlight()' ng-if='!(ui.selectFileOpen || ui.enterFlightOpen)'>
     <div class="alignHelper"></div>
     <i class="customIcon fa fa-question-circle"></i>
     <span>I DON'T HAVE ONE</span>
   </a>
   <form action="/upload" method="post" enctype="multipart/form-data" ng-show='ui.selectFileOpen' class='row animated' ng-class='{fadeInUp: ui.selectFileOpen, fadeOutDown: !ui.selectFileOpen}'>
     <input id='fileUpload' name="profileImage" type="file" accept="image/*;capture=camera" onchange='angular.element(this).scope().watcher.selectedFile()' hidden/>
-    <div class="qrCodeContainer" ng-class='{hasImageSelected: ui.imageUploaded}'></div>
+    <div class="qrCodeContainer" ng-class='{"hasImageSelected": ui.imageUploaded}'></div>
     <button class='waves-effect waves-light btn' type='button' ng-click='dom.uploadFile()'><i class='fa fa-file'></i> Upload</button>
     <button class='waves-effect waves-light btn' type='submit'><i class='fa fa-sign-in'></i> Login</button>
   </form>
