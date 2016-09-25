@@ -9,12 +9,6 @@ app.config(function($routeProvider, $locationProvider) {
   .when("/dashboard", {
     templateUrl : "./templates/dashboard.html"
   })
-  .when("/", {
-    templateUrl : "./templates/landing.html"
-  })
-  .when("/dashboard", {
-    templateUrl : "./templates/dashboard.html"
-  })
   .when("/map", {
     templateUrl : "./templates/map.html"
   });

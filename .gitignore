@@ -9,5 +9,5 @@ server/npm-debug.log
 server/db
 npm-debug.log
 coverage
-uploads/*
+server/uploads/*
 .DS_Store
