@@ -44,9 +44,28 @@
     </div>
   </div>
 
-  <a class="waves-effect waves-light btn btn-large airportal-btn btn-wide airportal-white">
+  <a ng-click="getWhatToDo()" class="waves-effect waves-light btn btn-large airportal-btn btn-wide airportal-white">
     <div class="alignHelper"></div>
     <i class="mdfi_action_done"></i>
     <span>SHOW ME SOMETHING ELSE</span>
   </a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="alignHelper">
+      </div>
+      <div class="icon">
+        <img src="{{imageSrc}}" alt="" />
+      </div>
+      <div class="text">
+        <p>{{act}}</p>
+        <p class="coloured">{{venue}}</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" ng-click="getWhatToDo()" class="modal-trigger modal-action modal-close waves-effect btn airportal-white"><i class="mdfi_content_clear"></i>NOPE</a>
+      <a href="#!" ng-click="getWhatToDo()" class="modal-trigger modal-action modal-close waves-effect btn airportal-white"><i class="mdfi_action_done"></i>SOUNDS GOOD</a>
+    </div>
+  </div>
 </div>
