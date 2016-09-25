@@ -27,7 +27,6 @@ module.exports = {
     const bag_tag = columns[10];
     const flight_class = parseInt(row, 10) < 10 ? 'first-class' : 'economy';
 
-
     const ticket = new ticketModel();
     ticket.terminal = terminal;
     ticket.origin = origin;
