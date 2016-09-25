@@ -1,3 +1,5 @@
+const ticket = 
+
 module.exports = {
   parseQRString: str => {
     if(!str) return null;

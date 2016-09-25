@@ -3,7 +3,7 @@ const mg = require('mongoose');
 const ticket = mg.model('Ticket',
   {
     _id: Number,
-    ticketNumber: Number,
+    ticket_number: Number,
     terminal: Number,
     origin: String,
     destination: String,
