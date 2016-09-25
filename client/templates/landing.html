@@ -18,19 +18,13 @@
     <input id='fileUpload' name="profileImage" type="file" accept="image/*;capture=camera" onchange='angular.element(this).scope().watcher.selectedFile()' hidden/>
     <div class="qrCodeContainer" ng-class='{"hasImageSelected": ui.imageUploaded}'></div>
     <button class='waves-effect waves-light btn' type='button' ng-click='dom.uploadFile()'><i class='fa fa-file'></i> Upload</button>
-    <button class='waves-effect waves-light btn' type='submit'><i class='fa fa-sign-in'></i> Login</button>
+    <button id='uploadFileSubmit' type='submit' hidden></button>
   </form>
   <form action="/ticketInfo" method="post" enctype="multipart/form-data" ng-show='ui.enterFlightOpen' class='row animated' ng-class='{fadeInUp: ui.enterFlightOpen, fadeOutDown: !ui.enterFlightOpen}'>
     <div class="row">
       <div class="input-field col s6 offset-s3">
         <input id="flightNo" type="text" class="validate">
         <label for="flightNo">Flight Number</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s6 offset-s3">
-        <input id="flightDate" type="date" class="validate">
-        <label for="flightDate">Flight Date</label>
       </div>
     </div>
     <button class='waves-effect waves-light btn' type='submit'><i class='fa fa-sign-in'></i> Login</button>

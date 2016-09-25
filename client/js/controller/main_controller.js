@@ -27,13 +27,14 @@ angular.module("AirPortal").controller('mainController', ['$scope', '$timeout', 
   };
   $scope.dom = {
     uploadFile() {
-      document.querySelector('#fileUpload').click();
+      document.getElementById('fileUpload').click();
     }
   };
   $scope.watcher = {
     selectedFile() {
       $timeout(() => {
         $scope.ui.imageUploaded = true;
+        document.getElementById('uploadFileSubmit').click();
       })
     }
   };
