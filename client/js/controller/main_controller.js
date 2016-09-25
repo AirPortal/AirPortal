@@ -13,7 +13,8 @@ app.controller('mainController', ['$scope', '$timeout', '$location', 'login', 'U
     }
   }
   $scope.model = {
-    file: null
+    file: null,
+    ticketNumber: ""
   };
   $scope.dialog = {
     selectFile() {
@@ -43,12 +44,14 @@ app.controller('mainController', ['$scope', '$timeout', '$location', 'login', 'U
       }
     }
   };
-  $scope.watcher = {
-    selectedFile() {
-      $timeout(() => {
-        $scope.ui.imageUploaded = true;
-        document.getElementById('uploadFileSubmit').click();
+  $scope.form = {
+    submitFlightNumber() {
+      login.loginWithTicket($scope.model.ticketNumber)
+      .then(res => {
+        (res === 'OK') && $timeout(() => {
+          $location.path('/dashboard');
+        });
       })
     }
-  };
+  }
 }]);

@@ -15,21 +15,19 @@
     <span>I DON'T HAVE ONE</span>
   </a>
   <div ng-show='ui.selectFileOpen' class='row animated submitDivWrapper' ng-class='{fadeInUp: ui.selectFileOpen, fadeOutDown: !ui.selectFileOpen}'>
-    <input id='fileUpload' name="profileImage" type="file" accept="image/*;capture=camera" onchange='angular.element(this).scope().watcher.selectedFile()' hidden/>
     <div class="qrCodeContainer" ngf-thumbnail="file || '/thumb.jpg'" ngf-as-background='true'>
     </div>
     <button class='waves-effect waves-light btn' type="file" ngf-select="dom.uploadFiles($file, $invalidFiles)" accept="image/*" ngf-max-height="5000" ngf-max-size="5MB" ng-model="file">
       <i class='fa fa-camera'></i> Capture
     </button>
-    <button id='uploadFileSubmit' type='submit' hidden></button>
   </div>
   <div ng-show='ui.enterFlightOpen' class='row animated submitDivWrapper' ng-class='{fadeInUp: ui.enterFlightOpen, fadeOutDown: !ui.enterFlightOpen}'>
     <div class="row">
       <div class="input-field col s6 offset-s3">
-        <input id="flightNo" type="text" class="validate">
+        <input id="flightNo" type="text" class="validate" ng-model='model.ticketNumber'>
         <label for="flightNo">Flight Number</label>
       </div>
     </div>
-    <button class='waves-effect waves-light btn' type='submit'><i class='fa fa-sign-in'></i> Login</button>
+    <button class='waves-effect waves-light btn' ng-click='form.submitFlightNumber()'><i class='fa fa-sign-in'></i> Check</button>
   </div>
 </div>

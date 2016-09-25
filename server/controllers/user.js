@@ -7,7 +7,7 @@ module.exports = {
     console.log(req.body);
     ticketModel.findOne({ ticket_number: ticketNumber}, (err, ticket) => {
       const responseObj = {msg: err};
-      if(err) res.send(responseObj);
+      if(err) return res.send(responseObj);
       const oldDate = new Date();
       const fifthteenMinutesLater = new Date(oldDate.getTime() + 15 * 60000);
       ticket = ticket || {};
