@@ -5,6 +5,7 @@ app.config(function($routeProvider, $locationProvider) {
   })
   .when("/hurry", {
     templateUrl : "./templates/hurry.html"
+  })
   .when("/dashboard", {
     templateUrl : "./templates/dashboard.html"
   })
