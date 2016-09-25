@@ -2,7 +2,7 @@ const userModel = require(__dirname + '/../models/user');
 const ticketModel = require(__dirname + '/../models/ticket');
 
 module.exports = {
-  register: (req, res) => {
+  login: (req, res) => {
     const user = new userModel();
     user.name = req.body.name;
     user.ticketNumber = req.body.ticketNumber;
@@ -11,8 +11,5 @@ module.exports = {
       const msg = {msg: 'user created'};
       res.send(JSON.stringify(msg));
     });
-  },
-  login: (req, res) => {
-
   }
 };

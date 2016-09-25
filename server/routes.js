@@ -10,7 +10,6 @@ const uploadController = require(__dirname + '/controllers/upload');
 const weatherController = require(__dirname + '/controllers/weather');
 const bagController = require(__dirname + '/controllers/bag');
 
-router.post('/register', userController.register);
 router.post('/login', userController.login);
 router.post('/upload', upload.single('profileImage'), uploadController.upload);
 
