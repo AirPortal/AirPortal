@@ -22,6 +22,7 @@
     "material-design-fonticons": "^1.0.0",
     "materialize": "^0.97.7",
     "jquery": "^3.1.1",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "ng-file-upload": "^12.2.11"
   }
 }
