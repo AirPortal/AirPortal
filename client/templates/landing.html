@@ -1,9 +1,9 @@
 <div id='landingPage' class='container' ng-controller="mainController">
   <div class="fixed-action-btn animated fadeIn" style="bottom: 45px; left: 24px;" ng-if='ui.selectFileOpen || ui.enterFlightOpen'>
-   <a class="btn-floating btn-large red" ng-click='uiFx.resetButtons()'>
-     <i class="fa fa-arrow-left" ></i>
-   </a>
- </div>
+    <a class="btn-floating btn-large red" ng-click='uiFx.resetButtons()'>
+      <i class="fa fa-arrow-left" ></i>
+    </a>
+   </div>
   <a class="waves-effect waves-light btn-large airportal-btn airportal-primaryBtn animated fadeInDown" ng-click='dialog.selectFile()' ng-if='!(ui.selectFileOpen || ui.enterFlightOpen)'>
     <div class="alignHelper"></div>
     <i class="customIcon fa fa-qrcode"></i>
