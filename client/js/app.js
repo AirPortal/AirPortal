@@ -1,1 +1,1 @@
-var app = angular.module("AirPortal", ['ngRoute']);
+var app = angular.module("AirPortal", ['ngRoute', 'ngPinchZoom']);

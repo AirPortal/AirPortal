@@ -5,11 +5,72 @@
 $themeBG: #ffb500;
 $themeRed: #f00032;
 $themeOrange: #ff6600;
+$themeWhite: #ffffff;
+$themeGrey: #757575;
+$themeLightGrey: #97867e;
 // custom variables
 
 // style
 body {
   background-color: $themeBG;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 5rem 1rem 2rem 1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 5rem 1rem 2rem 1rem;
+  color: $themeLightGrey;
+  &.white {
+    color: $themeWhite;
+  }
+}
+
+.alignHelper {
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn {
+  &.airportal-btn {
+    width: 80%;
+    height: 80px;
+    min-width: 300px;
+  }
+  margin-top: 20px;
+  &.airportal-primaryBtn {
+    background-color: $themeOrange;
+  }
+  &.airportal-secondaryBtn {
+    background-color: $themeRed;
+  }
+  &.airportal-white {
+    background-color: $themeWhite;
+    span, i {
+      color: $themeGrey;
+    }
+  }
+  span, i {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  i.customIcon {
+    text-align: right;
+    font-size: 36px;
+  }
+  span {
+    font-size: 18px;
+    text-align: left;
+    margin-left: 10px;
+    width: 80%;
+  }
 }
 
 // --- different pages
@@ -21,37 +82,12 @@ body {
 	background-repeat: repeat-x;
 	width: 100vw;
 	height: 100vh;
-  .alignHelper {
-    height: 100%;
-    display: inline-block;
-    vertical-align: middle;
-  }
   .btn {
-    &.airportal-btn {
-      width: 80%;
-      height: 80px;
-      min-width: 300px;
-    }
-    margin-top: 20px;
     &.airportal-primaryBtn {
       background-color: $themeOrange;
     }
     &.airportal-secondaryBtn {
       background-color: $themeRed;
-    }
-    span, i.customIcon {
-      display: inline-block;
-      vertical-align: middle;
-    }
-    i.customIcon {
-      text-align: right;
-      font-size: 36px;
-    }
-    span {
-      font-size: 18px;
-      text-align: left;
-      margin-left: 10px;
-      width: 80%;
     }
   }
   // --- forms

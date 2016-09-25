@@ -1,4 +1,4 @@
-angular.module("AirPortal").controller('mainController', ['$scope', '$timeout', 'login', ($scope, $timeout, login) => {
+app.controller('mainController', ['$scope', '$timeout', 'login', ($scope, $timeout, login) => {
   login.loginWithTicket(1);
 
   $scope.ui = {
