@@ -1,4 +1,4 @@
-angular.module("AirPortal").controller('mainController', ['$scope', 'login', ($scope, login) => {
+angular.module("AirPortal").controller('mainController', ['$scope', '$timeout', 'login', ($scope, $timeout, login) => {
   login.loginWithTicket(1);
 
   $scope.ui = {
@@ -32,8 +32,9 @@ angular.module("AirPortal").controller('mainController', ['$scope', 'login', ($s
   };
   $scope.watcher = {
     selectedFile() {
-      $scope.ui.imageUploaded = true;
-      console.log($scope.ui.imageUploaded);
+      $timeout(() => {
+        $scope.ui.imageUploaded = true;
+      })
     }
   };
 }]);
