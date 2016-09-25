@@ -13,7 +13,7 @@ module.exports = filename => {
     console.log('result of qr code: ' + result);
   } catch(e) {
     console.log('unable to read qr code using fallback string');
-    result = 'SIN,HKT,2,E24,SQ5330,1625,24,0950581685';
+    result = 'SIN,SFO,1,14,UA2,1815,3,A,Leisley,Brooks,0950474012';
   }
   return result;
 };
