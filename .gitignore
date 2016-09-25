@@ -7,5 +7,6 @@ public
 dist
 /server/config/local.env.js
 server/npm-debug.log
+server/db
 npm-debug.log
 coverage
