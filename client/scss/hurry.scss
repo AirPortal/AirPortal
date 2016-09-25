@@ -1,0 +1,27 @@
+@import 'colors';
+#hurryPage {
+  h4 {
+    color: $themeRed;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  span {
+    &.greenText {
+      color: $themeGreen;
+      font-weight: 500;
+    }
+    &.redText {
+      color: $themeRed;
+      font-weight: 500;
+    }
+  }
+  .modal {
+    .modal-content {
+      padding: 3.2rem 2rem 0 2rem;
+    }
+  }
+  .btn-flat {
+    width: 100%;
+    height: auto;
+  }
+}
