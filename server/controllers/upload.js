@@ -1,4 +1,5 @@
 const qrDecoder = require('./qr_decoder');
+const ticketController = require('./ticket');
 
 module.exports = {
   upload: (req, res, next) => {
@@ -11,7 +12,8 @@ module.exports = {
       // var profileImageExt=req.file.extension;
       // var profileImageSize=req.file.size;
       console.log(profileImagePath);
-      qrDecoder(__dirname + '/../' + profileImagePath);
+      const decoded = qrDecoder(__dirname + '/../' + profileImagePath);
+      ticketController.parseQRString(decoded);
 
       const response = JSON.stringify({msg: 'file uploaded'});
       res.send(response);
