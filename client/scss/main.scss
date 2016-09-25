@@ -10,6 +10,13 @@ $themeOrange: #ff6600;
 // style
 body {
   background-color: $themeBG;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 5rem 1rem 2rem 1rem;
 }
 
 // --- different pages
