@@ -1,3 +1,1 @@
-angular.module('AirPortal', []).controller('mainController', () => {
-	console.log("hi");
-});
+var app = angular.module("AirPortal", []);
