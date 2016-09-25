@@ -2,5 +2,15 @@
   <h2>Flght {{flightNo}} to {{destination}}: {{flightstatus}}
   <br>Time until boarding: {{hoursLeft}}h {{minutesLeft}}min</h2>
 
-  
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4><i class="mdfi_alert_warning"/> HURRY UP!</h4>
+      <p>Your flight is <span class='greenText'>on time</span> and departing in {{timeleft}} min.<br>
+      Go to <span class='redText'>Gate {{gate}}</span> in <span class='redText'>Terminal {{terminal}}</span></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn airportal-btn btn-flat"><i class="mdfi_action_done"></i>SHOW ME SOMETHING ELSE</a>
+    </div>
+  </div>
 </div>

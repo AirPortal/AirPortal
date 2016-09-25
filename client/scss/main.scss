@@ -18,6 +18,8 @@ h2 {
   font-size: 1.6rem;
   font-weight: 500;
   margin: 5rem 1rem 2rem 1rem;
+  text-align: center;
+  line-height: 2.5rem;
   color: $themeLightGrey;
   &.white {
     color: $themeWhite;
@@ -62,6 +64,19 @@ h2 {
     text-align: left;
     margin-left: 10px;
     width: 80%;
+  }
+}
+
+.lean-overlay {
+  background: transparent;
+}
+
+.modal {
+  margin-top: 8em;
+  .btn-flat {
+    margin: auto;
+    width: 100%;
+    height: auto;
   }
 }
 
