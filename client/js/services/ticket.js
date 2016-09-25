@@ -1,11 +1,10 @@
-app.factory('ticket', ['$cacheFactory', ($cacheFactory) => {
+app.factory('ticket', ['localStorageService', (localStorageService) => {
   const obj = {};
-  const ticketCache = $cacheFactory('ticket');
   obj.storeTicket = ticketData => {
-    ticketCache.put('record', ticketData);
+    localStorageService.set('ticket.record', ticketData);
   };
   obj.getTicket = () => {
-    return ticketCache.get('record');
+    return localStorageService.get('ticket.record');
   }
   return obj;
 }]);
