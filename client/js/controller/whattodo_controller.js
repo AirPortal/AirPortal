@@ -7,6 +7,8 @@ app.controller('whattodoController', ['$scope', 'whattodoService', ($scope, what
   $('.modal-trigger').leanModal();
   $('#modal1').openModal();
   whattodoService.whattodo().then((res) => {
-
+    console.log(res);
+    $scope.act = res.action;
+    $scope.venue = res.venue;
   });
 }]);
