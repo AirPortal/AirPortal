@@ -22,7 +22,7 @@ app.controller('dashboardController', ['$scope', 'dashboardService', '$timeout',
 
         $timeout(() => {
           $('.modal-trigger').leanModal({
-            dismissible: false,
+            dismissible: true,
             in_duration: 200,
             out_duration: 200,
             complete: () => {
