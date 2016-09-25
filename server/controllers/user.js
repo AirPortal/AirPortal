@@ -10,6 +10,7 @@ module.exports = {
       if(err) res.send(responseObj);
       const oldDate = new Date();
       const fifthteenMinutesLater = new Date(oldDate.getTime() + 15 * 60000);
+      ticket = ticket || {};
       ticket.boarding_time = fifthteenMinutesLater;
       res.send(ticket);
     });

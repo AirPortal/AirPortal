@@ -3,6 +3,7 @@ const ticketController = require('./ticket');
 
 module.exports = {
   upload: (req, res, next) => {
+    console.log(req);
     if(req.file) {
       console.log('Uploading File');
       // var profileImageOriginlName=req.file.originalname;
