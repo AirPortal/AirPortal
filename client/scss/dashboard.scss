@@ -32,6 +32,8 @@ body {
   .btn {
     &.btn-wide {
       width: 90% !important;
+      margin: 5em auto;
+      display: block;
     }
   }
 }
