@@ -1,5 +1,6 @@
-app.service('login', ($http) => {
-  this.loginWithTicket = num => {
+app.factory('login', ['$http', ($http) => {
+  const obj = {};
+  obj.loginWithTicket = num => {
     const data = {
       ticketNumber: num
     };
@@ -9,4 +10,5 @@ app.service('login', ($http) => {
 
     });
   };
-});
+  return obj;
+}]);
