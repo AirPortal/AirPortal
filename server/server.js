@@ -21,6 +21,7 @@ app.use('/', express.static(path.join(__dirname, '/../client/index.html')));
 app.use('/generate_204', express.static(path.join(__dirname, '/../client/index.html')));
 app.use('/library/test/success.html', express.static(path.join(__dirname, '/../client/index.html')));
 app.use('/hotspot-detect.html', express.static(path.join(__dirname, '/../client/index.html')));
+app.use('/fonts', express.static(path.join(__dirname, '/../client/assets/fonts')));
 
 const routes = require('./routes');
 app.use('/', routes);
