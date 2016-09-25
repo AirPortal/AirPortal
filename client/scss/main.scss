@@ -1,14 +1,6 @@
 // libraries
 @import "../bower_components/materialize/sass/materialize";
-
-// var override
-$themeBG: #ffb500;
-$themeRed: #f00032;
-$themeOrange: #ff6600;
-$themeWhite: #ffffff;
-$themeGrey: #757575;
-$themeLightGrey: #97867e;
-// custom variables
+@import 'colors';
 
 // style
 body {

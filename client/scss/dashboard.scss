@@ -1,0 +1,19 @@
+@import 'colors';
+body {
+  background-color: $themePurple;
+}
+
+#dashboardPage {
+  .card {
+    &.darkpurple {
+      background-color: $darkPurple;
+    }
+  }
+  .card-content {
+    img {
+      width: 100px;
+      margin: auto;
+      display: block;
+    }
+  }
+}
