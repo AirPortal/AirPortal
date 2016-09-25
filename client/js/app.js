@@ -1,1 +1,1 @@
-var app = angular.module("AirPortal", []);
+var app = angular.module("AirPortal", ['ngRoute']);
