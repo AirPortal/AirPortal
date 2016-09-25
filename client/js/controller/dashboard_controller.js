@@ -1,4 +1,4 @@
-app.controller('dashboardController', ['$scope', '$location', 'dashboardService', 'ticket', 'whattodoService', ($scope, $location, dashboardService, ticket, whattodoService) => {
+app.controller('dashboardController', ['$scope', '$location', 'dashboardService', 'ticket', 'whattodoService', '$timeout', ($scope, $location, dashboardService, ticket, whattodoService, $timeout) => {
   if (!ticket.getTicket('record')) {
     return $location.path('/');
   }
