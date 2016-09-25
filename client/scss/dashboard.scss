@@ -4,16 +4,27 @@ body {
 }
 
 #dashboardPage {
+  h1 {
+    color: $themeWhite;
+    text-align: center;
+  }
   .card {
     &.darkpurple {
       background-color: $darkPurple;
     }
   }
   .card-content {
+    text-align: center;
     img {
-      width: 100px;
+      max-height: 100px;
       margin: auto;
       display: block;
+    }
+  }
+
+  .btn {
+    &.btn-wide {
+      width: 90% !important;
     }
   }
 }

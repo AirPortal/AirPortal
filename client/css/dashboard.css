@@ -1,1 +1,1 @@
-body{background-color:#ad0e72}#dashboardPage .card.darkpurple{background-color:#8c0b5d}#dashboardPage .card-content img{width:100px;margin:auto;display:block}
+#dashboardPage .card-content,#dashboardPage h1{text-align:center}body{background-color:#ad0e72}#dashboardPage h1{color:#fff}#dashboardPage .card.darkpurple{background-color:#8c0b5d}#dashboardPage .card-content img{max-height:100px;margin:auto;display:block}#dashboardPage .btn.btn-wide{width:90%!important}

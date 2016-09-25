@@ -2,6 +2,8 @@ app.controller('dashboardController', ['$scope', 'dashboardService', ($scope, da
   dashboardService.weather().then(res => {
     $scope.temperatureScale = res.data.temperatureScale;
     $scope.temp = res.data.currentWeather.temperature;
+    $scope.luggage = 'Ready!';
+    $scope.waittime = 30;
   }, () => {
 
   });
