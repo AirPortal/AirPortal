@@ -5,6 +5,8 @@
 $themeBG: #ffb500;
 $themeRed: #f00032;
 $themeOrange: #ff6600;
+$themeWhite: #ffffff;
+$themeGrey: #757575;
 // custom variables
 
 // style
@@ -17,6 +19,12 @@ h1 {
   font-size: 1.8rem;
   font-weight: 500;
   margin: 5rem 1rem 2rem 1rem;
+}
+
+.alignHelper {
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .btn {
@@ -32,7 +40,13 @@ h1 {
   &.airportal-secondaryBtn {
     background-color: $themeRed;
   }
-  span, i.customIcon {
+  &.airportal-white {
+    background-color: $themeWhite;
+    span, i {
+      color: $themeGrey;
+    }
+  }
+  span, i {
     display: inline-block;
     vertical-align: middle;
   }
@@ -57,11 +71,6 @@ h1 {
 	background-repeat: repeat-x;
 	width: 100vw;
 	height: 100vh;
-  .alignHelper {
-    height: 100%;
-    display: inline-block;
-    vertical-align: middle;
-  }
   .btn {
     &.airportal-primaryBtn {
       background-color: $themeOrange;
