@@ -1,13 +1,1 @@
-app.factory('whattodoService', ['$http', ($http) => {
-  const obj = {};
-  obj.whattodo = () => (
-    new Promise((resolve, reject) => {
-      $http.get('/getTodo').then(res => {
-        resolve(res.data);
-      }, () => {
-
-      });
-    })
-  );
-  return obj;
-}]);
+"use strict";app.factory("whattodoService",["$http",function(t){var n={};return n.whattodo=function(){return new Promise(function(n,o){t.get("/getTodo").then(function(t){n(t.data)},function(){})})},n}]);

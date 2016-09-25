@@ -1,7 +1,1 @@
-app.controller('hurryController', ['$scope', '$timeout', ($scope, $timeout) => {
-  $('.modal-trigger').leanModal();
-  $('#modal1').openModal();
-  $scope.timeleft = 15;
-  $scope.gate = 1;
-  $scope.terminal = 1;
-}]);
+"use strict";app.controller("hurryController",["$scope","$timeout",function(e,o){$(".modal-trigger").leanModal(),$("#modal1").openModal(),e.timeleft=15,e.gate=1,e.terminal=1}]);

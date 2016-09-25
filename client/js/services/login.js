@@ -1,16 +1,1 @@
-app.factory('login', ['$http', ($http) => {
-  const obj = {};
-  obj.loginWithTicket = num => (
-    new Promise((resolve, reject) => {
-      const data = {
-        ticketNumber: num
-      };
-      $http.post('/login', data).then(res => {
-        resolve("OK");
-      }, () => {
-        reject();
-      });
-    }
-  ));
-  return obj;
-}]);
+"use strict";app.factory("login",["$http",function(t){var n={};return n.loginWithTicket=function(n){return new Promise(function(i,o){var r={ticketNumber:n};t.post("/login",r).then(function(t){i("OK")},function(){o()})})},n}]);

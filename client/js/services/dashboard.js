@@ -1,7 +1,1 @@
-app.factory('dashboardService', ['$http', ($http) => {
-  const obj = {};
-  obj.weather = () => (
-    $http.get('/weather')
-  );
-  return obj;
-}]);
+"use strict";app.factory("dashboardService",["$http",function(t){var r={};return r.weather=function(){return t.get("/weather")},r}]);

@@ -1,1 +1,1 @@
-var app = angular.module("AirPortal", ['ngRoute', 'ngFileUpload', 'LocalStorageModule']);
+"use strict";var app=angular.module("AirPortal",["ngRoute","ngFileUpload","LocalStorageModule"]);
