@@ -1,15 +1,16 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 const multer = require('multer');
 const upload = multer({
   dest: 'uploads/'
 });
 
-const userController = require(__dirname + '/controllers/user');
-const uploadController = require(__dirname + '/controllers/upload');
-const weatherController = require(__dirname + '/controllers/weather');
-const bagController = require(__dirname + '/controllers/bag');
-const todoController = require(__dirname + '/controllers/todo');
+const userController = require(path.join(__dirname, '/controllers/user'));
+const uploadController = require(path.join(__dirname, '/controllers/upload'));
+const weatherController = require(path.join(__dirname, '/controllers/weather'));
+const bagController = require(path.join(__dirname, '/controllers/bag'));
+const todoController = require(path.join(__dirname, '/controllers/todo'));
 
 router.post('/login', userController.login);
 router.post('/upload', upload.single('profileImage'), uploadController.upload);
