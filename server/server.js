@@ -6,6 +6,7 @@ const app = express();
 
 const mg = require('mongoose');
 mg.connect(`mongodb://${config.dbHost}/${config.dbDatabase}`);
+require('./init');
 
 app.use(bodyParser.json({limit: '50mb'})); // for parsing application/json
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true, parameterLimit: 50000})); // for parsing application/x-www-form-urlencoded
