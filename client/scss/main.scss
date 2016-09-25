@@ -113,4 +113,12 @@ h2 {
       background-repeat: no-repeat;
     }
   }
+  // flight number
+  #flightNo {
+    border-bottom-color: #fff;
+    + label {
+      color: $themeRed;
+      left: 0%;
+    }
+  }
 }

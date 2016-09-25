@@ -1,4 +1,4 @@
-app.controller('mainController', ['$scope', '$timeout', 'login', 'Upload', ($scope, $timeout, login, Upload) => {
+app.controller('mainController', ['$scope', '$timeout', '$location', 'login', 'Upload', ($scope, $timeout, $location, login, Upload) => {
   login.loginWithTicket(1);
 
   $scope.ui = {
@@ -13,7 +13,8 @@ app.controller('mainController', ['$scope', '$timeout', 'login', 'Upload', ($sco
     }
   }
   $scope.model = {
-    file: null
+    file: null,
+    ticketNumber: ""
   };
   $scope.dialog = {
     selectFile() {
@@ -35,30 +36,22 @@ app.controller('mainController', ['$scope', '$timeout', 'login', 'Upload', ($sco
           data: { profileImage: file },
           method: 'POST'
         }).then(function (resp) {
-          console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+          console.log('Success ' + resp.config.data.profileImage.name + 'uploaded. Response: ' + resp.data);
+          $location.path('/dashboard');
         }, function (resp) {
           console.log('Error status: ' + resp.status);
-        }, function (evt) {
-          var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-          console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
         });
-        // })
-        // .then((response) => {
-        //   console.log(response);
-        //   $timeout(() => {
-        //     file.result = response.data;
-        //     $scope.ui.imageUploaded = true;
-        //   });
-        // });
       }
     }
   };
-  $scope.watcher = {
-    selectedFile() {
-      $timeout(() => {
-        $scope.ui.imageUploaded = true;
-        document.getElementById('uploadFileSubmit').click();
+  $scope.form = {
+    submitFlightNumber() {
+      login.loginWithTicket($scope.model.ticketNumber)
+      .then(res => {
+        (res === 'OK') && $timeout(() => {
+          $location.path('/dashboard');
+        });
       })
     }
-  };
+  }
 }]);
