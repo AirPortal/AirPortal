@@ -4,11 +4,13 @@ app.controller('whattodoController', ['$scope', 'whattodoService', ($scope, what
   $scope.flightstatus = "on time";
   $scope.hoursLeft = 3;
   $scope.minutesLeft = 40;
-  $('.modal-trigger').leanModal();
-  $('#modal1').openModal();
+  $scope.act = null;
+  $scope.venue = null;
   whattodoService.whattodo().then((res) => {
     console.log(res);
     $scope.act = res.action;
     $scope.venue = res.venue;
   });
+  $('.modal-trigger').leanModal();
+  $('#modal1').openModal();
 }]);

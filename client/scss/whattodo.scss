@@ -1,5 +1,13 @@
 #whattodoPage {
   .btn {
     float: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  .modal {
+    .modal-footer {
+    width: 90%;
+    margin: auto;
+    }
   }
 }
