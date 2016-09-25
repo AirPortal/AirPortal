@@ -4,7 +4,6 @@ public
 .tmp
 .sass-cache
 .idea
-dist
 /server/config/local.env.js
 server/npm-debug.log
 server/db
