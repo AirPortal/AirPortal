@@ -3,7 +3,6 @@ const ticketController = require('./ticket');
 
 module.exports = {
   upload: (req, res, next) => {
-    console.log(req);
     if(req.file) {
       console.log('Uploading File');
       // var profileImageOriginlName=req.file.originalname;
@@ -14,9 +13,12 @@ module.exports = {
       // var profileImageSize=req.file.size;
       console.log(profileImagePath);
       const decoded = qrDecoder(__dirname + '/../' + profileImagePath);
-      ticketController.parseQRString(decoded);
+      const ticketData = ticketController.parseQRString(decoded);
 
-      const response = JSON.stringify({msg: 'file uploaded'});
+      const response = JSON.stringify({
+        msg: 'file uploaded',
+        data: ticketData
+      });
       res.send(response);
     }
   }

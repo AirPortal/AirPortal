@@ -27,20 +27,17 @@ module.exports = {
     const bag_tag = columns[10];
     const flight_class = parseInt(row, 10) < 10 ? 'first-class' : 'economy';
 
+    const bag_tags = [bag_tag];
+    const ticketData = {
+      terminal, origin, destination, gate, flight_number, boarding_time, row, bag_tags, flight_class
+    };
     const ticket = new ticketModel();
-    ticket.terminal = terminal;
-    ticket.origin = origin;
-    ticket.destination = destination;
-    ticket.gate = gate;
-    ticket.flight_number = flight_number;
-    ticket.boarding_time = boarding_time;
-    ticket.row = row;
-    ticket.bag_tags = [bag_tag];
-    ticket.flight_class = flight_class;
+    Object.assign(ticket, ticketData);
 
     ticket.save((err, u) => {
       if(err) return console.error(err);
     });
     console.log(columns);
+    return ticketData;
   }
 };

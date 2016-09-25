@@ -23,6 +23,7 @@
   <script src="js/services/login.js"></script>
   <script src="js/services/dashboard.js"></script>
   <script src="js/services/whattodo.js"></script>
+  <script src="js/services/ticket.js"></script>
   <script src="js/controller/main_controller.js"></script>
   <script src="js/controller/hurry_controller.js"></script>
   <script src="js/controller/dashboard_controller.js"></script>
@@ -31,5 +32,10 @@
 </head>
 <body>
   <div ng-view></div>
+  <div class="fixed-action-btn animated fadeIn" style="top: 0; left: 12px; bottom: auto; right: auto;">
+    <a class="btn-floating btn-small" href='/'>
+      <i class="fa fa-home"></i>
+    </a>
+  </div>
 </body>
 </html>

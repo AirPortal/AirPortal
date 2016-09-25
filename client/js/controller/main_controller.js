@@ -1,6 +1,4 @@
-app.controller('mainController', ['$scope', '$timeout', '$location', 'login', 'Upload', ($scope, $timeout, $location, login, Upload) => {
-  login.loginWithTicket(1);
-
+app.controller('mainController', ['$scope', '$timeout', '$location', 'login', 'Upload', 'ticket', ($scope, $timeout, $location, login, Upload, ticket) => {
   $scope.ui = {
     selectFileOpen: false,
     enterFlightOpen: false,
@@ -26,7 +24,7 @@ app.controller('mainController', ['$scope', '$timeout', '$location', 'login', 'U
       $scope.ui.enterFlightOpen = true;
     }
   };
-  $scope.dom = {
+  $scope.form = {
     uploadFiles(file, errFiles) {
       $scope.f = file;
       $scope.errFile = errFiles && errFiles[0];
@@ -36,15 +34,14 @@ app.controller('mainController', ['$scope', '$timeout', '$location', 'login', 'U
           data: { profileImage: file },
           method: 'POST'
         }).then(function (resp) {
-          console.log('Success ' + resp.config.data.profileImage.name + 'uploaded. Response: ' + resp.data);
+          console.log('Success ' + resp.config.data.profileImage.name + 'uploaded. Response: ' + JSON.stringify(resp.data));
+          ticket.storeTicket(resp.data.data);
           $location.path('/dashboard');
         }, function (resp) {
           console.log('Error status: ' + resp.status);
         });
       }
-    }
-  };
-  $scope.form = {
+    },
     submitFlightNumber() {
       login.loginWithTicket($scope.model.ticketNumber)
       .then(res => {
