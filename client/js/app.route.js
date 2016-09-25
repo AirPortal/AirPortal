@@ -1,1 +1,1 @@
-"use strict";app.config(function(t,e){t.when("/",{templateUrl:"./templates/landing.html"}).when("/hurry",{templateUrl:"./templates/hurry.html"}).when("/dashboard",{templateUrl:"./templates/dashboard.html"}).when("/whattodo",{templateUrl:"./templates/whattodo.html"}).when("/map",{templateUrl:"./templates/map.html"}),e.html5Mode({enabled:!0,requireBase:!1})});
+"use strict";

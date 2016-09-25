@@ -12,6 +12,7 @@ app.use(bodyParser.json({limit: '50mb'})); // for parsing application/json
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true, parameterLimit: 50000})); // for parsing application/x-www-form-urlencoded
 app.use(express.static(path.join(__dirname, '/../client')));
 app.use('/', express.static(path.join(__dirname, '/../client/index.html')));
+app.use('/scan', express.static(path.join(__dirname, '/../client/scan.html')));
 
 // --- CAPTIVE PORTAL HANDLING ---
 // app.use('/generate_204', (req, res) => {
