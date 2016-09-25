@@ -1,7 +1,9 @@
 #mapPage {
   .btn {
     &.btn-wide {
-      width: 100%;
+      width: 90%;
+      display: block;
+      margin: auto;
     }
   }
 }
