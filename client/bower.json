@@ -1,0 +1,27 @@
+{
+  "name": "client",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Alan Shum <alan200994@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/AirPortal/AirPortal",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.8",
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "fontawesome#^4.6.3",
+    "material-design-fonticons": "^1.0.0",
+    "materialize": "^0.97.7",
+    "jquery": "^3.1.1",
+    "animate.css": "^3.5.2"
+  }
+}

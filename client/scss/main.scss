@@ -27,9 +27,11 @@ body {
     vertical-align: middle;
   }
   .btn {
-    width: 80%;
-    height: 80px;
-    min-width: 300px;
+    &.airportal-btn {
+      width: 80%;
+      height: 80px;
+      min-width: 300px;
+    }
     margin-top: 20px;
     &.airportal-primaryBtn {
       background-color: $themeOrange;
@@ -37,11 +39,11 @@ body {
     &.airportal-secondaryBtn {
       background-color: $themeRed;
     }
-    span, i {
+    span, i.customIcon {
       display: inline-block;
       vertical-align: middle;
     }
-    i {
+    i.customIcon {
       text-align: right;
       font-size: 36px;
     }
@@ -50,6 +52,21 @@ body {
       text-align: left;
       margin-left: 10px;
       width: 80%;
+    }
+  }
+  // --- forms
+  form {
+    margin-top: 40px;
+  }
+  .qrCodeContainer {
+    width: 160px;
+    height: 160px;
+    background-color: #fff;
+    margin: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    &.hasImageSelected {
+      background-image: url('../assets/qr.png');
+      background-size: contain;
     }
   }
 }
