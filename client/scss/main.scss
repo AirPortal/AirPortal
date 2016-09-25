@@ -8,6 +8,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+[ng-view] > div {
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+}
+
 h1 {
   font-size: 1.8rem;
   font-weight: 500;

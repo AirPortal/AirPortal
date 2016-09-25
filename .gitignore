@@ -11,3 +11,4 @@ npm-debug.log
 coverage
 server/uploads/*
 .DS_Store
+css
