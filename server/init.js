@@ -15,7 +15,7 @@ todoModel.find({}, (err, todos) => {
     });
 
     todoModel.create({
-      action: 'Gp visit',
+      action: 'Go visit',
       venue: 'Orchid Garden'
     });
   }
