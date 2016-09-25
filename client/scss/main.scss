@@ -7,6 +7,7 @@ $themeRed: #f00032;
 $themeOrange: #ff6600;
 $themeWhite: #ffffff;
 $themeGrey: #757575;
+$themeLightGrey: #97867e;
 // custom variables
 
 // style
@@ -19,6 +20,16 @@ h1 {
   font-size: 1.8rem;
   font-weight: 500;
   margin: 5rem 1rem 2rem 1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 5rem 1rem 2rem 1rem;
+  color: $themeLightGrey;
+  &.white {
+    color: $themeWhite;
+  }
 }
 
 .alignHelper {

@@ -22,13 +22,12 @@ app.use('/generate_204', express.static(path.join(__dirname, '/../client/index.h
 app.use('/library/test/success.html', express.static(path.join(__dirname, '/../client/index.html')));
 app.use('/hotspot-detect.html', express.static(path.join(__dirname, '/../client/index.html')));
 app.use('/fonts', express.static(path.join(__dirname, '/../client/assets/fonts')));
+const routes = require('./routes');
+app.use('/', routes);
 app.use((req, res) => {
   // Use res.sendfile, as it streams instead of reading the file into memory.
   res.sendFile(path.resolve(path.join(__dirname, '/../client/index.html')));
 });
-
-const routes = require('./routes');
-app.use('/', routes);
 
 app.listen(config.serverPort, () => {
   console.info('server started');
