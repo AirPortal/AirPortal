@@ -10,3 +10,4 @@ server/npm-debug.log
 server/db
 npm-debug.log
 coverage
+uploads/*

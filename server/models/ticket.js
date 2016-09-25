@@ -2,16 +2,17 @@ const mg = require('mongoose');
 
 const ticket = mg.model('Ticket',
   {
-    _id: Number,
-    ticketNumber: Number,
+    ticket_number: Number,
     terminal: Number,
     origin: String,
     destination: String,
-    gate: Number,
+    gate: String,
     boarding_time: Date,
-    flight_number: Number,
+    flight_number: String,
     airline_carrier: String,
-    bag_tags: [String]
+    row: String,
+    bag_tags: [String],
+    flight_class: String
   }
 );
 

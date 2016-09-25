@@ -10,7 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "canvas": "^1.5.0",
     "express": "^4.14.0",
+    "jsqrcode": "0.0.6",
     "mongoose": "^4.6.1",
     "multer": "^1.2.0",
     "path": "^0.12.7",
