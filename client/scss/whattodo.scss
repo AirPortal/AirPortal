@@ -1,3 +1,9 @@
+@import 'colors';
+
+body {
+  background-image: url('../assets/background_depart.png');
+}
+
 #whattodoPage {
   .btn {
     float: none;
@@ -6,8 +12,33 @@
   }
   .modal {
     .modal-footer {
-    width: 90%;
-    margin: auto;
+      width: 90%;
+      margin: auto;
+    }
+    .modal-content {
+      .icon {
+        width: 20%;
+        display: inline-block;
+        vertical-align: middle;
+        img {
+          width: 60px;
+        }
+      }
+      .text {
+        width: 75%;
+        padding: 0em 2em;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      p {
+        font-size: 1.2em;
+        margin: 0;
+      }
+      .coloured {
+        color: $themeOrange;
+        font-size: 1.5em;
+        font-weight: 500;
+      }
     }
   }
 }

@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="css/whattodo.css">
+
 <div id="whattodoPage" ng-controller="whattodoController">
   <h2>Flght {{flightNo}} to {{destination}}: {{flightstatus}}
   <br>Time until boarding: {{hoursLeft}}h {{minutesLeft}}min</h2>
@@ -5,8 +7,15 @@
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
-      <p>{{act}}</p>
-      <p>{{venue}}</p>
+      <div class="alignHelper">
+      </div>
+      <div class="icon">
+        <img src="{{imageSrc}}" alt="" />
+      </div>
+      <div class="text">
+        <p>{{act}}</p>
+        <p class="coloured">{{venue}}</p>
+      </div>
     </div>
     <div class="modal-footer">
       <a href="#!" ng-click="getWhatToDo()" class="modal-trigger modal-action modal-close waves-effect btn airportal-white"><i class="mdfi_content_clear"></i>NOPE</a>

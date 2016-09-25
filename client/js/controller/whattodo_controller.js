@@ -6,6 +6,7 @@ app.controller('whattodoController', ['$scope', 'whattodoService', '$timeout', (
   $scope.minutesLeft = 40;
   $scope.act = null;
   $scope.venue = null;
+  $scope.imageSrc = "/assets/garden_icon.png";
   const getWhatToDo = () => {
     return new Promise((resolve, reject) => {
       whattodoService.whattodo().then((res) => {
