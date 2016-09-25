@@ -45,7 +45,9 @@ app.controller('mainController', ['$scope', '$timeout', '$location', 'login', 'U
     submitFlightNumber() {
       login.loginWithTicket($scope.model.ticketNumber)
       .then(res => {
-        (res === 'OK') && $timeout(() => {
+        console.log(res);
+        // ticket.storeTicket(res);
+        (res) && $timeout(() => {
           $location.path('/dashboard');
         });
       })

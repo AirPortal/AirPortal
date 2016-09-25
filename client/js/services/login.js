@@ -6,7 +6,7 @@ app.factory('login', ['$http', ($http) => {
         ticketNumber: num
       };
       $http.post('/login', data).then(res => {
-        resolve("OK");
+        resolve(res.data);
       }, () => {
         reject();
       });
