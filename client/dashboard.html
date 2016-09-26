@@ -1,0 +1,102 @@
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="bower_components/material-design-fonticons/styles/mdfi.css">
+<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/map.css">
+<link rel="stylesheet" href="css/hurry.css">
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+<script src="bower_components/angular-pinch-zoom/dist/ng-pinch-zoom.min.js"></script>
+<script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+<script src="bower_components/ng-file-upload/ng-file-upload-shim.min.js"></script>
+<script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services/login.js"></script>
+<script src="js/services/dashboard.js"></script>
+<script src="js/services/whattodo.js"></script>
+<script src="js/services/ticket.js"></script>
+<script src="js/controller/main_controller.js"></script>
+<script src="js/controller/hurry_controller.js"></script>
+<script src="js/controller/dashboard_controller.js"></script>
+<script src="js/controller/whattodo_controller.js"></script>
+<script src="js/directives/modal.js"></script>
+<div id="dashboardPage" ng-controller="dashboardController">
+  <h1>WELCOME to Changi Airport</h1>
+  <div class="row">
+    <div class="col s6">
+      <div class="card darkpurple">
+        <div class="card-content white-text">
+          <img src="assets/suitcase.png" alt="" />
+          <span class="card-title">{{luggage}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="col s6">
+      <div class="card darkpurple">
+        <div class="card-content white-text">
+          <img src="assets/sun.png" alt="" />
+          <span class="card-title">{{temp}}°{{temperatureScale}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s6">
+      <div class="card darkpurple">
+        <div class="card-content white-text">
+          <img src="assets/customs-police.png" alt="" />
+          <span class="card-title">{{waittime}} min wait</span>
+        </div>
+      </div>
+    </div>
+    <div class="col s6">
+      <div class="card darkpurple">
+        <div class="card-content white-text">
+          <div class="transport">
+            <img src="assets/taxi.png" alt="" />
+            <span class="card-title">{{taxi}} min</span>
+          </div>
+          <div class="transport">
+            <img src="assets/public-transport-subway.png" alt="" />
+            <span class="card-title">{{subway}} min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a ng-click="getWhatToDo()" class="waves-effect waves-light btn btn-large airportal-btn btn-wide airportal-white">
+    <div class="alignHelper"></div>
+    <i class="mdfi_action_done"></i>
+    <span>SHOW ME SOMETHING ELSE</span>
+  </a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="alignHelper">
+      </div>
+      <div class="icon">
+        <img src="{{imageSrc}}" alt="" />
+      </div>
+      <div class="text">
+        <p>{{act}}</p>
+        <p class="coloured">{{venue}}</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" ng-click="getWhatToDo()" class="modal-trigger modal-action modal-close waves-effect btn airportal-white"><i class="mdfi_content_clear"></i>NOPE</a>
+      <a href="#!" ng-click="getWhatToDo()" class="modal-trigger modal-action modal-close waves-effect btn airportal-white"><i class="mdfi_action_done"></i>SOUNDS GOOD</a>
+    </div>
+  </div>
+</div>
+
+<div class="fixed-action-btn animated fadeIn" style="top: 0; left: 12px; bottom: auto; right: auto;">
+  <a class="btn-floating btn-small" href='/'>
+    <i class="fa fa-home"></i>
+  </a>
+</div>

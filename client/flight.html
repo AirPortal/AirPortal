@@ -31,22 +31,21 @@
   <script src="js/directives/modal.js"></script>
 </head>
 <body>
-  <div id='landingPage' class='container' ng-controller="mainController">
-    <a class="waves-effect waves-light btn-large airportal-btn airportal-primaryBtn animated fadeInDown" href='/scan'>
-      <div class="alignHelper"></div>
-      <i class="customIcon fa fa-qrcode"></i>
-      <span>SCAN BOARDING PASS</span>
-    </a>
-    <a class="waves-effect waves-light btn-large airportal-btn airportal-secondaryBtn animated fadeInDown" href='/flight'>
-      <div class="alignHelper"></div>
-      <i class="customIcon fa fa-question-circle"></i>
-      <span>I DON'T HAVE ONE</span>
-    </a>
-  </div>
-  <div class="fixed-action-btn animated fadeIn" style="top: 0; left: 12px; bottom: auto; right: auto;">
-    <a class="btn-floating btn-small" href='/'>
-      <i class="fa fa-home"></i>
-    </a>
+  <div class="container" style='padding-top: 120px;'>
+    <div class='row animated submitDivWrapper fadeInTop' style='text-align: center;'>
+      <div class="row">
+        <div class="input-field col s6 offset-s3">
+          <input id="flightNo" type="text" class="validate" ng-model='model.ticketNumber'>
+          <label for="flightNo">Flight Number</label>
+        </div>
+      </div>
+      <a class='waves-effect waves-light btn' href='/dashboard'><i class='fa fa-sign-in'></i> Check</a>
+    </div>
+    <div class="fixed-action-btn animated fadeIn" style="top: 0; left: 12px; bottom: auto; right: auto;">
+      <a class="btn-floating btn-small" href='/'>
+        <i class="fa fa-home"></i>
+      </a>
+    </div>
   </div>
 </body>
 </html>

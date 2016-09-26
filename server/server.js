@@ -13,6 +13,8 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended: true, parameterLimit: 50
 app.use(express.static(path.join(__dirname, '/../client')));
 app.use('/', express.static(path.join(__dirname, '/../client/index.html')));
 app.use('/scan', express.static(path.join(__dirname, '/../client/scan.html')));
+app.use('/flight', express.static(path.join(__dirname, '/../client/flight.html')));
+app.use('/dashboard', express.static(path.join(__dirname, '/../client/dashboard.html')));
 
 // --- CAPTIVE PORTAL HANDLING ---
 // app.use('/generate_204', (req, res) => {
